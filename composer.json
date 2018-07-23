@@ -14,6 +14,11 @@
             "Zend\\ErrorIndex\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Zend\\ErrorIndexTests\\": "tests"
+        }
+    },
     "minimum-stability": "stable",
     "require": {
         "zendframework/zend-mvc": "^3.1",

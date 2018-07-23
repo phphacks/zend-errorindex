@@ -2,7 +2,8 @@
 
 namespace Zend\ErrorIndex\Adapter;
 
-use Zend\ErrorIndex\Indexable;
+use Zend\ErrorIndex\Model\Indexable;
+
 
 /**
  * ThrowableAdapter

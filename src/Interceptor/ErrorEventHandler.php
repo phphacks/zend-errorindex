@@ -3,7 +3,7 @@
 namespace Zend\ErrorIndex\Interceptor;
 
 use Zend\ErrorIndex\Adapter\ThrowableAdapter;
-use Zend\ErrorIndex\ErrorIndexWriterInterface;
+use Zend\ErrorIndex\Writer\ErrorIndexWriterInterface;
 use Zend\Mvc\MvcEvent;
 
 /**

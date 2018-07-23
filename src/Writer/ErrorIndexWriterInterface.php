@@ -1,6 +1,8 @@
 <?php
 
-namespace Zend\ErrorIndex;
+namespace Zend\ErrorIndex\Writer;
+
+use Zend\ErrorIndex\Model\Indexable;
 
 interface ErrorIndexWriterInterface
 {

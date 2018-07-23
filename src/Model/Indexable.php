@@ -1,6 +1,6 @@
 <?php
 
-namespace Zend\ErrorIndex;
+namespace Zend\ErrorIndex\Model;
 
 class Indexable
 {
