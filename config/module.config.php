@@ -1,7 +1,7 @@
 <?php
 
 use Zend\ErrorIndex\Interceptor\ErrorEventListener;
-use Zend\Mvc\Di\Dependency\Injection\InjectableFactory;
+use Zend\ErrorIndex\Factory\ErrorEventListenerFactory;
 
 return [
     'listeners' => [
@@ -9,7 +9,7 @@ return [
     ],
     'service_manager' => [
         'factories' => [
-            ErrorEventListener::class => InjectableFactory::class
+            ErrorEventListener::class => ErrorEventListenerFactory::class
         ]
     ]
 ];
