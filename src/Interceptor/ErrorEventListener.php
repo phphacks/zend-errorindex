@@ -34,7 +34,12 @@ class ErrorEventListener extends AbstractListenerAggregate
      */
     public function attach(EventManagerInterface $events, $priority = 1)
     {
-        $this->listeners[] = $events->attach(MvcEvent::EVENT_RENDER_ERROR,   [$this->errorEventHandler, 'handleEvent']);
-        $this->listeners[] = $events->attach(MvcEvent::EVENT_DISPATCH_ERROR, [$this->errorEventHandler, 'handleEvent'], 100);
+        $errorEventHandler = $this->errorEventHandler;
+        $callback = function (MvcEvent $event) use($errorEventHandler) {
+            $errorEventHandler->handle($event);
+        };
+
+        $this->listeners[] = $events->attach(MvcEvent::EVENT_RENDER_ERROR, $callback);
+        $this->listeners[] = $events->attach(MvcEvent::EVENT_DISPATCH_ERROR, $callback, 100);
     }
 }
